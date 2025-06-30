@@ -17,8 +17,8 @@ jobs:
       - name: Create Pull Request to release
         uses: peter-evans/create-pull-request@v6
         with:
-          source-branch: develop
-          target-branch: release
+          branch: develop
+          base: release
           title: 'Merge develop into release after release-please PR'
           body: 'Automated PR to merge develop into release after release-please PR is merged.'
           token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
