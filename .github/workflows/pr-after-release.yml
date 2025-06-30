@@ -1,7 +1,8 @@
 name: Create PR After Release-Please
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [develop]
 
 permissions:
@@ -10,6 +11,7 @@ permissions:
 
 jobs:
   create-pr:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.title, 'release')
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -19,6 +21,6 @@ jobs:
         with:
           branch: develop
           base: release
-          title: 'Merge develop into release after release-please PR'
+          title: 'Merge develop into release after release-please PR is merged'
           body: 'Automated PR to merge develop into release after release-please PR is merged.'
           token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
