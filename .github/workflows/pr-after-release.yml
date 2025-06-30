@@ -1,0 +1,25 @@
+name: Create PR After Release-Please
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [develop]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-pr:
+    if: github.event.pull_request.merged == true
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Create Pull Request to release
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: develop
+          title: 'Merge develop into release after release-please PR is merged'
+          body: 'Automated PR to merge develop into release after release-please PR is merged.'
+          token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
