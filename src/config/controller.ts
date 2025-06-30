@@ -1,6 +1,6 @@
 export function Controller() {
-  const a = "Hello World";
-  console.log(a);
+  const b = "Hello World";
+  console.log(b);
 }
 
 Controller.prototype.ComponentSelectionPageCallback = function () {
