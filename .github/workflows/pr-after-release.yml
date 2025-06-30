@@ -20,7 +20,6 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           branch: develop
-          base: release
           title: 'Merge develop into release after release-please PR is merged'
           body: 'Automated PR to merge develop into release after release-please PR is merged.'
           token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
