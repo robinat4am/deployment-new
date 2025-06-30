@@ -3,6 +3,8 @@ name: Release Please
 on:
   push:
     branches: [develop]
+    branches: [release]
+    branches: [master]
 
 permissions:
   contents: write
@@ -12,9 +14,26 @@ jobs:
   release-please:
     runs-on: windows-latest
     steps:
-      - name: Release Please
+      - name: Release Please on develop
+        if: github.ref_name != 'master' || github.ref_name != 'release' || github.ref_name != 'develop'
         uses: googleapis/release-please-action@v4
         with:
           release-type: node
           token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
           target-branch: develop
+
+      - name: Release Please on release
+        if: github.ref_name == 'develop'
+        uses: googleapis/release-please-action@v4
+        with:
+          release-type: node
+          token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+          target-branch: release
+
+      - name: Release Please on master
+        if: github.ref_name == 'master'
+        uses: googleapis/release-please-action@v4
+        with:
+          release-type: node
+          token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+          target-branch: master 
