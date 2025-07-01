@@ -17,4 +17,5 @@ jobs:
         with:
           release-type: node
           token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
-          target-branch: release
+          target-branch: develop
+          release-branch: release
