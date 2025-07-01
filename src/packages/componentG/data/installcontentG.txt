@@ -3,3 +3,4 @@ This file will be installed into the target directory....
 robin test 1
 robin test 2
 robin test 3
+robin test 4
