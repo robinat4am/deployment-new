@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/robinat4am/deployment-new/compare/v1.2.0...v1.3.0) (2025-07-01)
+
+
+### Features
+
+* robin test 4 ([63c9fc2](https://github.com/robinat4am/deployment-new/commit/63c9fc271c5a695dab426d95239d9990a3349695))
+
 ## [1.2.0](https://github.com/robinat4am/deployment-new/compare/v1.1.0...v1.2.0) (2025-07-01)
 
 
