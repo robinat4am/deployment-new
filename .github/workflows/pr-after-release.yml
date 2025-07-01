@@ -19,7 +19,7 @@ jobs:
       - name: Create Pull Request to release
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: develop
+          #branch: develop
           base: release
           title: 'Merge develop into release after release-please PR is merged'
           body: 'Automated PR to merge develop into release after release-please PR is merged.'
