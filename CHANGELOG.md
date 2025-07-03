@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/robinat4am/deployment-new/compare/v1.6.0...v1.7.0) (2025-07-03)
+
+
+### Features
+
+* test pr ([cf87334](https://github.com/robinat4am/deployment-new/commit/cf87334b00f7d0c44a1291192d2d17b219f57692))
+
 ## [1.6.0](https://github.com/robinat4am/deployment-new/compare/v1.5.0...v1.6.0) (2025-07-01)
 
 
