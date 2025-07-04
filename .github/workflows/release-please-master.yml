@@ -1,0 +1,21 @@
+name: Release Please
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: windows-latest
+    steps:
+      - name: Release Please on release
+        uses: googleapis/release-please-action@v4
+        with:
+          release-type: node
+          token: ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+          target-branch: master
+          #release-branch: release
