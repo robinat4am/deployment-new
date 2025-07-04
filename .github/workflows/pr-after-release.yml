@@ -21,16 +21,14 @@ jobs:
         env:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
         run: |
-          gh pr create --base release --head develop \
-            --title "Merge develop into release after release-please PR is merged" \
-            --body "Automated PR to merge develop into release after release-please PR is merged."
+          gh pr create --base release --head develop --title "Merge develop into release after release-please PR is merged" --body "Automated PR to merge develop into release after release-please PR is merged."
           ## check PR status
 
           # timeout seconds
           timeout=300
           interval=10
           elapsed=0
-          
+          TARGET_PR="Merge develop into release after release-please PR is merged"
           while [ $elapsed -lt $timeout ]; do
             echo "Checking PR list (attempt $((elapsed/interval + 1)))..."
             
