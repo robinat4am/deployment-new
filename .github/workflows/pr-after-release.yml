@@ -20,8 +20,11 @@ jobs:
         id: check-pr
         env:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+        shell: bash
         run: |
-          gh pr create --base release --head develop --title "Merge develop into release after release-please PR is merged" --body "Automated PR to merge develop into release after release-please PR is merged."
+          gh pr create --base release --head develop \
+          --title "Merge develop into release after release-please PR is merged" \
+          --body "Automated PR to merge develop into release after release-please PR is merged."
           ## check PR status
 
           # timeout seconds
