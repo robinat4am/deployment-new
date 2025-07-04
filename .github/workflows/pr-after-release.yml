@@ -58,5 +58,7 @@ jobs:
         run: |
           git checkout release-please--branches--develop--components--my-typescript-project
           git pull
+          git config user.email "release.bot@example.com"
+          git config user.name "release bot"
           git commit --allow-empty -m "feat: feat 8"
           git push

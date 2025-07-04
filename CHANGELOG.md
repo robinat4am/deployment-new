@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.13.0](https://github.com/robinat4am/deployment-new/compare/v1.12.0...v1.13.0) (2025-07-04)
+
+
+### Features
+
+* automate pr branch commit ([5054a48](https://github.com/robinat4am/deployment-new/commit/5054a48f0600d8cc6a517904ac5a52d0f8dca9b5))
+
+## [1.12.0](https://github.com/robinat4am/deployment-new/compare/v1.11.0...v1.12.0) (2025-07-04)
+
+
+### Features
+
+* automate pr branch commit ([38858d6](https://github.com/robinat4am/deployment-new/commit/38858d631ea15fb0a0ad3534abcd4000c475c08f))
+
 ## [1.11.0](https://github.com/robinat4am/deployment-new/compare/v1.10.0...v1.11.0) (2025-07-04)
 
 
