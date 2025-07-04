@@ -56,7 +56,7 @@ jobs:
         env:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
         run: |
-          git co release-please--branches--develop--components--my-typescript-project
-          git push
+          git checkout release-please--branches--develop--components--my-typescript-project
+          git pull
           git commit --allow-empty -m "feat: feat 8"
           git push
