@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/robinat4am/deployment-new/compare/v1.16.0...v1.17.0) (2025-07-07)
+
+
+### Features
+
+* debug merge back to dev ([63f84e3](https://github.com/robinat4am/deployment-new/commit/63f84e39adf70af3dc0f531ea0c0691b6be281e7))
+
 ## [1.16.0](https://github.com/robinat4am/deployment-new/compare/v1.15.0...v1.16.0) (2025-07-07)
 
 ### Features
