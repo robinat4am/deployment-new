@@ -55,7 +55,11 @@ jobs:
         if: steps.check-pr.outputs.pr_exists == 'true'
         env:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+        shell: bash
         run: |
+          pwd
+          ls -al
+          git --no-pager branch
           git checkout release-please--branches--develop--components--my-typescript-project
           git pull
           git config user.email "release.bot@example.com"
