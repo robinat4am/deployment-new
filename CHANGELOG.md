@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.14.0](https://github.com/robinat4am/deployment-new/compare/v1.13.0...v1.14.0) (2025-07-04)
+
+
+### Features
+
+* auto pr commit ([8e0bf4f](https://github.com/robinat4am/deployment-new/commit/8e0bf4fdc364b6f217e460b92e79353998d35507))
+* feat 8 ([f5cfc16](https://github.com/robinat4am/deployment-new/commit/f5cfc16f234e12f632ddb07f20fa24a6d4176438))
+* to prod ([ee8ac7c](https://github.com/robinat4am/deployment-new/commit/ee8ac7c3be162e7839cdacb9fa89341cd6b7c918))
+
 ## [1.13.0](https://github.com/robinat4am/deployment-new/compare/v1.12.0...v1.13.0) (2025-07-04)
 
 
