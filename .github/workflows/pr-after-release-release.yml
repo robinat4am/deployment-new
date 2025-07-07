@@ -10,6 +10,42 @@ permissions:
   pull-requests: write
 
 jobs:
+
+  check_pr_source:
+    if: github.event.pull_request.merged == true
+    runs-on: windows-latest
+    steps:
+      - name: check pr source
+        shell: bash
+        id: check_pr_source
+        run:
+          if [[ "${{ github.head_ref }}" == release-please--branches--release ]]; then
+            echo "This is a PR from a release-please--branches--release branch"
+            echo "pr_from_release_please=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is a PR from a non-release-please--branches--release branch"
+            echo "pr_from_release_please=true" >> $GITHUB_OUTPUT
+          fi
+
+  create-pr-backp-to-dev:
+    if: ${{ github.event.pull_request && github.event.pull_request.merged == true && steps.check_pr_source.outputs.pr_from_release_please == 'true' }}
+    runs-on: windows-latest
+    steps:
+      - name: Debug outputs
+        run: |
+          echo "PR Merged: ${{ github.event.pull_request.merged }}"
+          echo "PR Source: ${{ steps.check_pr_source.outputs.pr_from_release_please }}"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: create pr with gh cli
+        env:
+          GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+        shell: bash
+        run: |
+          gh pr create --base release --head dev \
+          --title "Merge release into dev after release-please PR is merged" \
+          --body "Automated PR to merge release into master after release-please PR is merged."
+          exit 0
   create-pr:
     if: github.event.pull_request.merged == true
     runs-on: windows-latest
