@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/robinat4am/deployment-new/compare/v1.18.0...v1.19.0) (2025-07-08)
+
+
+### Features
+
+* fix pr ([fea5df2](https://github.com/robinat4am/deployment-new/commit/fea5df28b4f85ee1c9b59feb9ef326747ba7d72a))
+
 ## [1.18.0](https://github.com/robinat4am/deployment-new/compare/v1.17.0...v1.18.0) (2025-07-08)
 
 
