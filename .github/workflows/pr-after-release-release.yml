@@ -19,7 +19,7 @@ jobs:
         shell: bash
         id: check_pr_source
         run:
-          if [[ "${{ github.head_ref }}" == release-please--branches--release ]]; then
+          if [[ ${{ github.head_ref }} =~ release-please--branches--release ]]; then
             echo "This is a PR from a release-please--branches--release branch"
             echo "pr_from_release_please=true" >> $GITHUB_OUTPUT
           else
@@ -34,7 +34,7 @@ jobs:
       - name: check source
         shell: bash
         run: |
-          if steps.check_pr_source.outputs.pr_from_release_please == 'false'
+          if steps.check_pr_source.outputs.pr_from_release_please == false
           exit 1
       - name: Debug outputs
         run: |
@@ -93,7 +93,7 @@ jobs:
           exit 1
 
       - name: update pr with empty commit with "feat:" to trigger please-please on master
-        if: steps.check-pr.outputs.pr_exists == 'true'
+        if: steps.check-pr.outputs.pr_exists == true
         env:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
         shell: bash
@@ -101,6 +101,7 @@ jobs:
           pwd
           ls -al
           git --no-pager branch
+          git fetch origin
           git checkout release-please--branches--release--components--my-typescript-project
           git pull
           git config user.email "release.bot@example.com"
