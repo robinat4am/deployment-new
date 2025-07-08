@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/robinat4am/deployment-new/compare/v1.21.0...v1.22.0) (2025-07-08)
+
+
+### Features
+
+* fix workflow ([5f2e346](https://github.com/robinat4am/deployment-new/commit/5f2e346b78b1bc25eb8b1bc14491fb091bcaa2e4))
+
 ## [1.21.0](https://github.com/robinat4am/deployment-new/compare/v1.20.0...v1.21.0) (2025-07-08)
 
 
