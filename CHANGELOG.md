@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/robinat4am/deployment-new/compare/v1.17.0...v1.18.0) (2025-07-08)
+
+
+### Features
+
+* fix git co error ([39cba82](https://github.com/robinat4am/deployment-new/commit/39cba82bf84e4cc43c4e93e15aa50e1377b55c95))
+
 ## [1.17.0](https://github.com/robinat4am/deployment-new/compare/v1.16.0...v1.17.0) (2025-07-07)
 
 
