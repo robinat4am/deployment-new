@@ -1,0 +1,110 @@
+name: Create PR After Release-Please
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [release]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+
+  check_pr_source:
+    if: github.event.pull_request.merged == true
+    runs-on: windows-latest
+    steps:
+      - name: check pr source
+        shell: bash
+        id: check_pr_source
+        run:
+          if [[ ${{ github.head_ref }} =~ release-please--branches--release ]]; then
+            echo "This is a PR from a release-please--branches--release branch"
+            echo "pr_from_release_please=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is a PR from a non-release-please--branches--release branch"
+            echo "pr_from_release_please=false" >> $GITHUB_OUTPUT
+          fi
+
+  create-pr-backp-to-dev:
+    if: ${{ github.event.pull_request && github.event.pull_request.merged == true  }}
+    runs-on: windows-latest
+    steps:
+      - name: check source
+        shell: bash
+        run: |
+          if steps.check_pr_source.outputs.pr_from_release_please == false
+          exit 1
+      - name: Debug outputs
+        run: |
+          echo "PR Merged: ${{ github.event.pull_request.merged }}"
+          echo "PR Source: ${{ steps.check_pr_source.outputs.pr_from_release_please }}"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: create pr with gh cli
+        env:
+          GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+        shell: bash
+        run: |
+          gh pr create --base release --head dev \
+          --title "Merge release into dev after release-please PR is merged" \
+          --body "Automated PR to merge release into master after release-please PR is merged."
+          exit 0
+  create-pr:
+    if: github.event.pull_request.merged == true
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: create pr with gh cli
+        id: check-pr
+        env:
+          GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+        shell: bash
+        run: |
+          gh pr create --base master --head release \
+          --title "Merge release into master after release-please PR is merged" \
+          --body "Automated PR to merge release into master after release-please PR is merged."
+          ## check PR status
+
+          # timeout seconds
+          timeout=300
+          interval=10
+          elapsed=0
+          TARGET_PR="Merge release into master after release-please PR is merged"
+          while [ $elapsed -lt $timeout ]; do
+            echo "Checking PR list (attempt $((elapsed/interval + 1)))..."
+            
+            # get PR list and check target PR exist
+            if gh pr list --search "$TARGET_PR" --state all | grep -q "$TARGET_PR"; then
+              echo "::notice::Target PR found!"
+              echo "pr_exists=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+            
+            # wait for interval
+            sleep $interval
+            elapsed=$((elapsed + interval))
+          done
+          
+          echo "::error::Timeout reached. Target PR not found."
+          echo "pr_exists=false" >> $GITHUB_OUTPUT
+          exit 1
+
+      - name: update pr with empty commit with "feat:" to trigger please-please on master
+        if: steps.check-pr.outputs.pr_exists == true
+        env:
+          GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
+        shell: bash
+        run: |
+          pwd
+          ls -al
+          git --no-pager branch
+          git fetch origin
+          git checkout release-please--branches--release--components--my-typescript-project
+          git pull
+          git config user.email "release.bot@example.com"
+          git config user.name "release bot"
+          git commit --allow-empty -m "feat: feat 8"
+          git push
