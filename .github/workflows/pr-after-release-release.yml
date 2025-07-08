@@ -50,7 +50,7 @@ jobs:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
         shell: bash
         run: |
-          gh pr create --base release --head dev \
+          gh pr create --base develop --head release \
           --title "Merge release into dev after release-please PR is merged" \
           --body "Automated PR to merge release into master after release-please PR is merged."
           exit 0
