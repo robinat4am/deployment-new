@@ -59,6 +59,7 @@ jobs:
         run: |
           pwd
           ls -al
+          git fetch origin
           git --no-pager branch
           git checkout release-please--branches--develop--components--my-typescript-project
           git pull
