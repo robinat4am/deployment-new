@@ -34,8 +34,11 @@ jobs:
       - name: check source
         shell: bash
         run: |
-          if steps.check_pr_source.outputs.pr_from_release_please == false
-          exit 1
+          if [ "${{ steps.check_pr_source.outputs.pr_from_release_please }}" = "false" ]; then
+            echo "PR is not from release-please"
+            exit 1
+          fi
+          echo "PR is from release-please, continuing..."
       - name: Debug outputs
         run: |
           echo "PR Merged: ${{ github.event.pull_request.merged }}"
