@@ -24,13 +24,18 @@ jobs:
             echo "pr_from_release_please=true" >> $GITHUB_OUTPUT
           else
             echo "This is a PR from a non-release-please--branches--release branch"
-            echo "pr_from_release_please=true" >> $GITHUB_OUTPUT
+            echo "pr_from_release_please=false" >> $GITHUB_OUTPUT
           fi
 
   create-pr-backp-to-dev:
-    if: ${{ github.event.pull_request && github.event.pull_request.merged == true && steps.check_pr_source.outputs.pr_from_release_please == 'true' }}
+    if: ${{ github.event.pull_request && github.event.pull_request.merged == true  }}
     runs-on: windows-latest
     steps:
+      - name: check source
+        shell: bash
+        run: |
+          if steps.check_pr_source.outputs.pr_from_release_please == 'false'
+          exit 1
       - name: Debug outputs
         run: |
           echo "PR Merged: ${{ github.event.pull_request.merged }}"
