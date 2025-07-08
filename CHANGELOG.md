@@ -5,6 +5,8 @@
 
 ### Features
 
+
+* fix workflow ([2623188](https://github.com/robinat4am/deployment-new/commit/2623188b57c78b7ef38afc6d4b232ef8bc87a02a))
 * 0707-1 ([0fc137a](https://github.com/robinat4am/deployment-new/commit/0fc137a76483303c252260d5d8a7b5c8910db13d))
 * add ([c700df6](https://github.com/robinat4am/deployment-new/commit/c700df6b37c15c98e701c6fee146e5bd61bbf2b6))
 * add merge back for release ([7108789](https://github.com/robinat4am/deployment-new/commit/710878927f3251ce7e279f0f73e9d060ea211667))
