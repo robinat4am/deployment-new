@@ -26,6 +26,13 @@ jobs:
             echo "This is a PR from a non-release-please--branches--release branch"
             echo "pr_from_release_please=false" >> $GITHUB_OUTPUT
           fi
+          if [[ ${{ github.head_ref }} =~ master ]]; then
+            echo "This is a PR from a master branch"
+            echo "pr_from_master=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is a PR from a non-master branch"
+            echo "pr_from_master=false" >> $GITHUB_OUTPUT
+          fi
 
   create-pr-backp-to-dev:
     if: ${{ github.event.pull_request && github.event.pull_request.merged == true  }}
@@ -34,8 +41,8 @@ jobs:
       - name: check source
         shell: bash
         run: |
-          if [ "${{ steps.check_pr_source.outputs.pr_from_release_please }}" = "false" ]; then
-            echo "PR is not from release-please"
+          if [ "${{ steps.check_pr_source.outputs.pr_from_release_please }}" = "false" ] && [  "${{ steps.check_pr_source.outputs.pr_from_master }}" = "false" ]; then
+            echo "PR is not from release-please" and "PR is not from master"
             exit 1
           fi
           echo "PR is from release-please, continuing..."
@@ -50,7 +57,7 @@ jobs:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
         shell: bash
         run: |
-          gh pr create --base release --head dev \
+          gh pr create --base develop --head release \
           --title "Merge release into dev after release-please PR is merged" \
           --body "Automated PR to merge release into master after release-please PR is merged."
           exit 0
