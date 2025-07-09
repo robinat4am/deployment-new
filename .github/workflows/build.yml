@@ -1,6 +1,8 @@
 name: Build
 
 on:
+  push:
+    branches: [develop]
   pull_request:
     branches: [master, develop, release]
 
@@ -20,13 +22,13 @@ jobs:
             echo "This is a PR from a non-release-please branch"
             echo "pr_from_release-please=false" >> $GITHUB_OUTPUT
           fi
-      - name: skip release-please if pr is not from release-please
+      - name: skip release-please if pr is not from release-please, and is not from push
         shell: bash
         run: |
-          if [  "${{ steps.check_pr_source.outputs.pr_from_release }}" = "false" ]; then
+          if [  "${{ steps.check_pr_source.outputs.pr_from_release }}" = "false" ] && [ "${{ github.event_name }}" != "push" ]; then
             echo PR is from release-please, skip release-please"
             exit 0
-
+          fi
       - name: Checkout repository
         uses: actions/checkout@v4
 

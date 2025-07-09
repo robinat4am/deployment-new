@@ -31,6 +31,7 @@ jobs:
           if [  "${{ steps.check_pr_source.outputs.pr_from_master }}" = "true" ]; then
             echo PR is from master, skip release-please"
             exit 0
+          fi
       - name: Release Please on release
         uses: googleapis/release-please-action@v4
         with:
