@@ -27,7 +27,7 @@ jobs:
             echo "pr_from_release_please=false" >> $GITHUB_OUTPUT
           fi
 
-  create-pr-backp-to-dev:
+  create-pr-backp-to-release:
     if: ${{ github.event.pull_request && github.event.pull_request.merged == true  }}
     runs-on: windows-latest
     steps:
@@ -45,10 +45,26 @@ jobs:
           echo "PR Source: ${{ steps.check_pr_source.outputs.pr_from_release_please }}"
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Check for file changes
+        id: check-changes
+        shell: bash
+        run: |
+          BASE_BRANCH="release"  
+          HEAD_BRANCH="master"
+          echo "Comparing base:$BASE_BRANCH vs head:$HEAD_BRANCH"
+          # compare
+          if [ -z "$(git diff --name-only origin/$BASE_BRANCH...origin/$HEAD_BRANCH)" ]; then
+            echo "No files changed - skipping PR creation"
+            echo "skip_pr=true" >> $GITHUB_OUTPUT
+          else
+            echo "Files changed - proceeding with PR"
+            echo "skip_pr=false" >> $GITHUB_OUTPUT
+          fi
       - name: create pr with gh cli
         env:
           GH_TOKEN:  ${{ secrets.MY_RELESE_PLEASE_TOKEN }}
         shell: bash
+        if: steps.check-changes.outputs.skip_pr == 'false'
         run: |
           gh pr create --base release --head master \
           --title "Merge release into dev after release-please PR is merged" \

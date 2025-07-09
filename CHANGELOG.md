@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.28.0](https://github.com/robinat4am/deployment-new/compare/v1.27.0...v1.28.0) (2025-07-09)
+
+
+### Features
+
+* fix base branch ([136b5f6](https://github.com/robinat4am/deployment-new/commit/136b5f62e3188a0687926b254535ce9f3a541b98))
+* fix base branch ([f22612c](https://github.com/robinat4am/deployment-new/commit/f22612c719dd19861f8c6db7f009f4faf3bb9321))
+
+## [1.27.0](https://github.com/robinat4am/deployment-new/compare/v1.26.0...v1.27.0) (2025-07-09)
+
+
+### Features
+
+* fix emtpy pr ([d0401a8](https://github.com/robinat4am/deployment-new/commit/d0401a835f7c7b64dbaec56187fa9a961f0c793a))
+* fix emtpy pr ([84a1f10](https://github.com/robinat4am/deployment-new/commit/84a1f1048cf2d15f963b84ce55c26d6ec8458e10))
+
 ## [1.26.0](https://github.com/robinat4am/deployment-new/compare/v1.25.0...v1.26.0) (2025-07-09)
 
 
