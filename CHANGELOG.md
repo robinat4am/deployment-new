@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/robinat4am/deployment-new/compare/v1.24.0...v1.25.0) (2025-07-09)
+
+
+### Features
+
+* debug endless loop ([81b3c59](https://github.com/robinat4am/deployment-new/commit/81b3c59ff410466cf63bffddbdd761e835b3e410))
+
 ## [1.24.0](https://github.com/robinat4am/deployment-new/compare/v1.23.0...v1.24.0) (2025-07-08)
 
 
