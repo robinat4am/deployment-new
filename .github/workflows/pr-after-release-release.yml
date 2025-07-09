@@ -54,6 +54,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Check for file changes
         id: check-changes
+        shell: bash
         run: |
           BASE_BRANCH="develop"  
           HEAD_BRANCH="release"

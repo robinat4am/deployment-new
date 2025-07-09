@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.28.0](https://github.com/robinat4am/deployment-new/compare/v1.27.0...v1.28.0) (2025-07-09)
+
+
+### Features
+
+* fix base branch ([136b5f6](https://github.com/robinat4am/deployment-new/commit/136b5f62e3188a0687926b254535ce9f3a541b98))
+* fix base branch ([f22612c](https://github.com/robinat4am/deployment-new/commit/f22612c719dd19861f8c6db7f009f4faf3bb9321))
+
 ## [1.27.0](https://github.com/robinat4am/deployment-new/compare/v1.26.0...v1.27.0) (2025-07-09)
 
 
