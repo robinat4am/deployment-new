@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           if [  "${{ steps.check_pr_source.outputs.pr_from_master }}" = "true" ]; then
-            echo PR is from master, skip release-please"
+            echo "PR is from master, skip release-please"
             exit 0
           fi
       - name: Release Please on release
