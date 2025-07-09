@@ -1,7 +1,8 @@
 name: Release Please
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [develop]
 
 permissions:
@@ -11,7 +12,26 @@ permissions:
 jobs:
   release-please:
     runs-on: windows-latest
+    if: github.event.pull_request.merged == true
     steps:
+      - name: check pr source
+        shell: bash
+        id: check_pr_source
+        run: |
+          if [[ ${{ github.head_ref }} =~ release ]]; then
+            echo "This is a PR from a release branch"
+            echo "pr_from_release=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is a PR from a non-release branch"
+            echo "pr_from_release=false" >> $GITHUB_OUTPUT
+          fi
+      - name: skip release-please if pr is from release
+        shell: bash
+        run: |
+          if [  "${{ steps.check_pr_source.outputs.pr_from_release }}" = "true" ]; then
+            echo "PR is from release, skip release-please"
+            exit 0
+          fi
       - name: Release Please on develop
         uses: googleapis/release-please-action@v4
         with:

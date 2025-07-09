@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.26.0](https://github.com/robinat4am/deployment-new/compare/v1.25.0...v1.26.0) (2025-07-09)
+
+
+### Features
+
+* block build ([bb80c4d](https://github.com/robinat4am/deployment-new/commit/bb80c4d8baed3ca72690b88a6484f239df3c5272))
+* block build ([bb80c4d](https://github.com/robinat4am/deployment-new/commit/bb80c4d8baed3ca72690b88a6484f239df3c5272))
+* block build ([5778c11](https://github.com/robinat4am/deployment-new/commit/5778c1134f4cf5fed127f96cd2bf42e0b2108fb5))
+* block unnecessay action ([3d2b16c](https://github.com/robinat4am/deployment-new/commit/3d2b16c6e7ee082c9c7679fb161d6aa80e1e7c18))
+* fix ([e84d8d2](https://github.com/robinat4am/deployment-new/commit/e84d8d24e3739d7a29b1fbee59004a76378ab8d9))
+* fix ([f0a32ad](https://github.com/robinat4am/deployment-new/commit/f0a32ad040f53477009fa239cc5d065e9d8cc70a))
+* fix build ([a9b1ce7](https://github.com/robinat4am/deployment-new/commit/a9b1ce7c9d8469f396bc553b0fb68b9592d0f7d8))
+* fix build ([a8e0c06](https://github.com/robinat4am/deployment-new/commit/a8e0c060f6d4fef151185d26e86533963777c371))
+
 ## [1.25.0](https://github.com/robinat4am/deployment-new/compare/v1.24.0...v1.25.0) (2025-07-09)
 
 
