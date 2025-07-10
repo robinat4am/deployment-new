@@ -18,7 +18,7 @@ jobs:
         shell: bash
         id: check_pr_source
         run: |
-          if [[ ${{ github.head_ref }} =~ release ]]; then
+          if [[ ${{ github.head_ref }} == 'release' ]]; then
             echo "This is a PR from a release branch"
             echo "pr_from_release=true" >> $GITHUB_OUTPUT
           else
