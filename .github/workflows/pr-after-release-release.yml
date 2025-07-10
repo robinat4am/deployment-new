@@ -137,5 +137,5 @@ jobs:
           git pull
           git config user.email "release.bot@example.com"
           git config user.name "release bot"
-          git commit --allow-empty -m "feat: feat 8"
+          git commit --allow-empty -m "feat: merge to master"
           git push
