@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   create-pr:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'release-please--branches--develop--components--my-typescript-project'
     runs-on: windows-latest
     steps:
       - name: Checkout code
