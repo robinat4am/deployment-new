@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.35.0](https://github.com/robinat4am/deployment-new/compare/v1.34.0...v1.35.0) (2025-07-10)
+
+
+### Features
+
+* 710-6 ([b48cf8a](https://github.com/robinat4am/deployment-new/commit/b48cf8af726af7e85f38e6048fb68664c25e7ca2))
+* 710-6 ([2380f0a](https://github.com/robinat4am/deployment-new/commit/2380f0adb2de6df4f1f70f7168fa7e34386cb3c5))
+
 ## [1.34.0](https://github.com/robinat4am/deployment-new/compare/v1.33.0...v1.34.0) (2025-07-10)
 
 
