@@ -18,7 +18,7 @@ jobs:
         shell: bash
         id: check_pr_source
         run: |
-          if [[ ${{ github.head_ref }} =~ release ]]; then
+          if [[ ${{ github.head_ref }} == 'release' ]]; then
             echo "This is a PR from a release branch"
             echo "pr_from_release=true" >> $GITHUB_OUTPUT
           else
@@ -30,7 +30,7 @@ jobs:
         run: |
           if [  "${{ steps.check_pr_source.outputs.pr_from_release }}" = "true" ]; then
             echo "PR is from release, skip release-please"
-            exit 0
+            exit 1
           fi
       - name: Release Please on develop
         uses: googleapis/release-please-action@v4
