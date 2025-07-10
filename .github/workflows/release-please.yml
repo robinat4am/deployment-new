@@ -30,7 +30,7 @@ jobs:
         run: |
           if [  "${{ steps.check_pr_source.outputs.pr_from_release }}" = "true" ]; then
             echo "PR is from release, skip release-please"
-            exit 0
+            exit 1
           fi
       - name: Release Please on develop
         uses: googleapis/release-please-action@v4
