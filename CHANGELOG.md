@@ -1,9 +1,14 @@
 # Changelog
 
+
 ## [1.36.0](https://github.com/robinat4am/deployment-new/compare/v1.35.0...v1.36.0) (2025-07-10)
 
 
+
 ### Features
+
+* 14 ([3ee7fa8](https://github.com/robinat4am/deployment-new/commit/3ee7fa8f113554c026d89f26d87cd9aa5aac8b0b))
+* 14 ([9eeb3d4](https://github.com/robinat4am/deployment-new/commit/9eeb3d43c1b6cc3546fa44eb64d43059282d49b5))
 
 * merge to release ([116a110](https://github.com/robinat4am/deployment-new/commit/116a110f816d6bbb9e71850db1b3a2d69ade4380))
 
