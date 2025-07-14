@@ -1,5 +1,73 @@
 # Changelog
 
+
+## [1.37.0](https://github.com/robinat4am/deployment-new/compare/v1.36.0...v1.37.0) (2025-07-14)
+
+
+### Features
+
+* 14 ([3ee7fa8](https://github.com/robinat4am/deployment-new/commit/3ee7fa8f113554c026d89f26d87cd9aa5aac8b0b))
+* 14 ([9eeb3d4](https://github.com/robinat4am/deployment-new/commit/9eeb3d43c1b6cc3546fa44eb64d43059282d49b5))
+* merge to release ([9e50db6](https://github.com/robinat4am/deployment-new/commit/9e50db63858c6dbcc517aa801a4d8a312c825750))
+
+## [1.36.0](https://github.com/robinat4am/deployment-new/compare/v1.35.0...v1.36.0) (2025-07-10)
+
+
+
+### Features
+
+* 14 ([3ee7fa8](https://github.com/robinat4am/deployment-new/commit/3ee7fa8f113554c026d89f26d87cd9aa5aac8b0b))
+* 14 ([9eeb3d4](https://github.com/robinat4am/deployment-new/commit/9eeb3d43c1b6cc3546fa44eb64d43059282d49b5))
+
+* merge to release ([116a110](https://github.com/robinat4am/deployment-new/commit/116a110f816d6bbb9e71850db1b3a2d69ade4380))
+
+## [1.35.0](https://github.com/robinat4am/deployment-new/compare/v1.34.0...v1.35.0) (2025-07-10)
+
+
+### Features
+
+* 710-6 ([b48cf8a](https://github.com/robinat4am/deployment-new/commit/b48cf8af726af7e85f38e6048fb68664c25e7ca2))
+* 710-6 ([2380f0a](https://github.com/robinat4am/deployment-new/commit/2380f0adb2de6df4f1f70f7168fa7e34386cb3c5))
+
+## [1.34.0](https://github.com/robinat4am/deployment-new/compare/v1.33.0...v1.34.0) (2025-07-10)
+
+
+### Features
+
+* 710-5 ([edc4dc0](https://github.com/robinat4am/deployment-new/commit/edc4dc0b69a7b944d3f0687c1046b16a964f8909))
+* 710-5 ([136f824](https://github.com/robinat4am/deployment-new/commit/136f8245b53d48f007c8b0b6838eff2e8ef2c059))
+
+## [1.33.0](https://github.com/robinat4am/deployment-new/compare/v1.32.0...v1.33.0) (2025-07-10)
+
+
+### Features
+
+* 710-4 ([998929f](https://github.com/robinat4am/deployment-new/commit/998929f0c2d3c7a3fbc6de2fb17e1b897f8c4e4b))
+
+## [1.32.0](https://github.com/robinat4am/deployment-new/compare/v1.31.0...v1.32.0) (2025-07-10)
+
+
+### Features
+
+* 710-3 ([757d432](https://github.com/robinat4am/deployment-new/commit/757d43239741380cee5bb1892326be51aff1b118))
+* 710-3 ([50b5858](https://github.com/robinat4am/deployment-new/commit/50b58589d4ec3b23aee0b7bee87c4d914b8f8e5c))
+
+## [1.31.0](https://github.com/robinat4am/deployment-new/compare/v1.30.0...v1.31.0) (2025-07-10)
+
+
+### Features
+
+* 710-2 ([53bdef7](https://github.com/robinat4am/deployment-new/commit/53bdef7f925487eae472b18d28b0ce7f874e654b))
+* 710-2 ([d82126d](https://github.com/robinat4am/deployment-new/commit/d82126d4e6dabd12ea3b62c26f406fb6c5ce1fcf))
+
+## [1.30.0](https://github.com/robinat4am/deployment-new/compare/v1.29.0...v1.30.0) (2025-07-10)
+
+
+### Features
+
+* 0710-1 ([0b10fd8](https://github.com/robinat4am/deployment-new/commit/0b10fd87c8e3b46e4e6ea58739c4138ce85db792))
+* update feat message ([16ac932](https://github.com/robinat4am/deployment-new/commit/16ac932bec0c7b44404edb6af4f4a5e6a25e626b))
+
 ## [1.29.0](https://github.com/robinat4am/deployment-new/compare/v1.28.0...v1.29.0) (2025-07-10)
 
 
