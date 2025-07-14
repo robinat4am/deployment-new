@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [1.39.0](https://github.com/robinat4am/deployment-new/compare/v1.38.0...v1.39.0) (2025-07-14)
+
+
+### Features
+
+* 7-14 test 3 ([0aecce5](https://github.com/robinat4am/deployment-new/commit/0aecce5b448404088c37289414f323604d0e89d1))
+* 7-14 test 3 ([47f42ef](https://github.com/robinat4am/deployment-new/commit/47f42ef708889751d3e063638634112f103053d1))
+* merge to release ([cec93c9](https://github.com/robinat4am/deployment-new/commit/cec93c99ea8f565767032af130312fa1e75d0e52))
+
 ## [1.38.0](https://github.com/robinat4am/deployment-new/compare/v1.37.0...v1.38.0) (2025-07-14)
 
 
