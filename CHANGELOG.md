@@ -1,6 +1,17 @@
 # Changelog
 
 
+## [1.37.0](https://github.com/robinat4am/deployment-new/compare/v1.36.0...v1.37.0) (2025-07-14)
+
+
+### Features
+
+* 0714-2 ([47ad125](https://github.com/robinat4am/deployment-new/commit/47ad125d7871d3706f26419ca6b77153166da172))
+* 0714-2 ([42d19b6](https://github.com/robinat4am/deployment-new/commit/42d19b67115d37b18cdb0be555d327ad5163ad10))
+* 14 ([3ee7fa8](https://github.com/robinat4am/deployment-new/commit/3ee7fa8f113554c026d89f26d87cd9aa5aac8b0b))
+* 14 ([9eeb3d4](https://github.com/robinat4am/deployment-new/commit/9eeb3d43c1b6cc3546fa44eb64d43059282d49b5))
+* merge to release ([9e50db6](https://github.com/robinat4am/deployment-new/commit/9e50db63858c6dbcc517aa801a4d8a312c825750))
+
 ## [1.36.0](https://github.com/robinat4am/deployment-new/compare/v1.35.0...v1.36.0) (2025-07-10)
 
 
